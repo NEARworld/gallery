@@ -1,12 +1,12 @@
 ## 프로젝트 이름
 
-    Unsplash Random Gallery
+    Random Gallery
 
 ---
 
 ## Demo 링크
 
-link
+https://gallery-li05zckuj-nearworld.vercel.app/
 
 ---
 
@@ -40,7 +40,7 @@ Unsplash에서 제공하는 api를 이용하여 랜덤 이미지들을 웹 페�
 
 ## 문제 해결 경험
 
-https://velog.io/@nearworld
+https://velog.io/@nearworld/Unsplash-Random-Gallery
 
 ---
 
