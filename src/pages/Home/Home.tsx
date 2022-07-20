@@ -1,7 +1,14 @@
+import { useEffect, useState } from "react";
+import Count from "../../components/Count/Count";
+import Gallery from "../../components/Gallery/Gallery";
+
 function Home() {
+    const [image, setImage] = useState('');
+
     return (
         <>
-            <h1>Home</h1>
+            <Count />
+            <Gallery />
         </>
     );
 }

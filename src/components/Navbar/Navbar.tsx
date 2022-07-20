@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <nav>
             <div className='logo'>
-                SF_Park
+                Gallery
             </div>
             <ul>
                 <li><Link to='/' className='link'>Home</Link></li>
