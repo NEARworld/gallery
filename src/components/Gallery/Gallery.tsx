@@ -1,6 +1,19 @@
+import { useEffect, useState } from 'react'
 import './Gallery.scss'
 
 export default function Gallery() {
+
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080')
+            .then(res => res.json())
+            .then(data => {
+                setImages(data)
+                console.log(data)
+            })
+            .catch(err => console.log(err))
+    }, [])
 
     function randomRGB(): string {
         return `rgb(${Math.floor(Math.random() * 255)}, 
@@ -11,9 +24,10 @@ export default function Gallery() {
     return (
         <div className="container">
             {
-                Array.from({ length: 40 }).map((item, index) => (
+                images.map((data: object, index: number) => (
                     <div key={index} className="card" style={{
                         backgroundColor: randomRGB(),
+                        // backgroundImage: `${data.urls.regular}`
                     }}></div>
                 ))
             }
