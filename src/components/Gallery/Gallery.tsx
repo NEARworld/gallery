@@ -6,6 +6,9 @@ const unsplash = createApi({
     accessKey: process.env.REACT_APP_API_ACCESS_KEY!
 })
 
+console.log("?:", process.env.REACT_APP_API_ACCESS_KEY);
+
+
 export default function Gallery() {
 
     useEffect(() => {
