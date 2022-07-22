@@ -1,9 +1,9 @@
+import type { Random } from 'unsplash-js/dist/methods/photos/types';
 import { useEffect, useState } from 'react'
 import './Gallery.scss'
 
 export default function Gallery() {
-
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState<Random[]>([]);
 
     useEffect(() => {
         fetch('http://localhost:8080')
@@ -24,10 +24,10 @@ export default function Gallery() {
     return (
         <div className="container">
             {
-                images.map((data: object, index: number) => (
+                images?.map((data, index) => (
                     <div key={index} className="card" style={{
                         backgroundColor: randomRGB(),
-                        // backgroundImage: `${data.urls.regular}`
+                        backgroundImage: `url(${data.urls.regular})`
                     }}></div>
                 ))
             }
