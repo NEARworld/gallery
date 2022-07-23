@@ -1,6 +1,7 @@
-.container {
+.container-gallery {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  margin-top: 20px;
   .card {
     width: 100%;
     aspect-ratio: 1;

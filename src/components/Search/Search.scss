@@ -1,0 +1,25 @@
+.container-search {
+  display: flex;
+  justify-content: center;
+
+  input {
+    font-size: larger;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  button {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10%;
+    border: none;
+    margin-left: 5px;
+    padding: 10px 10px;
+    font-size: larger;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 115, 230);
+  }
+}

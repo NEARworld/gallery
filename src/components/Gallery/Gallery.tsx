@@ -15,19 +15,25 @@ export default function Gallery() {
             .catch(err => console.log(err))
     }, [])
 
-    // function randomRGB(): string {
-    //     return `rgb(${Math.floor(Math.random() * 255)}, 
-    //     ${Math.floor(Math.random() * 255)}, 
-    //     ${Math.floor(Math.random() * 255)})`
-    // }
+    function randomRGB(): string {
+        return `rgb(${Math.floor(Math.random() * 255)}, 
+        ${Math.floor(Math.random() * 255)}, 
+        ${Math.floor(Math.random() * 255)})`
+    }
 
     return (
-        <div className="container">
+        <div className="container-gallery">
             {
                 images?.map((data, index) => (
                     <div key={index} className="card" style={{
-                        // backgroundColor: randomRGB(),
                         backgroundImage: `url(${data.urls.regular})`
+                    }}></div>
+                ))
+            }
+            {
+                Array.from({ length: 30 }).map((data, index) => (
+                    <div key={index} className="card" style={{
+                        backgroundColor: randomRGB(),
                     }}></div>
                 ))
             }
