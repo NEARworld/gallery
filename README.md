@@ -12,7 +12,8 @@ https://gallery-li05zckuj-nearworld.vercel.app/
 
 ## 프로젝트 설명
 
-Unsplash에서 제공하는 api를 이용하여 랜덤 이미지들을 웹 페이지에 출력하는 프로젝트
+`Unsplash`에서 제공하는 api를 이용하여 랜덤 이미지들을 웹 페이지에 출력.
+`타입스크립트`와 `Context API`를 학습하기 위한 것이 주 목적.
 
 ---
 
