@@ -1,15 +1,19 @@
 import type { Random } from 'unsplash-js/dist/methods/photos/types';
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './Gallery.scss'
+import { CardContext } from '../../utils/CardContext';
 
 export default function Gallery() {
     const [images, setImages] = useState<Random[]>([]);
+    const cardContext = useContext(CardContext);
+    const tempCards = 30;
 
     useEffect(() => {
         fetch('http://localhost:8080')
             .then(res => res.json())
             .then(data => {
                 setImages(data)
+                cardContext?.setCards(data.length)
                 console.log(data)
             })
             .catch(err => console.log(err))
@@ -31,11 +35,12 @@ export default function Gallery() {
                 ))
             }
             {
-                Array.from({ length: 30 }).map((data, index) => (
-                    <div key={index} className="card" style={{
-                        backgroundColor: randomRGB(),
-                    }}></div>
-                ))
+                images ? null :
+                    Array.from({ length: tempCards }).map((data, index) => (
+                        <div key={index} className="card" style={{
+                            backgroundColor: randomRGB(),
+                        }}></div>
+                    ))
             }
         </div>
     )
